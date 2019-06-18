@@ -1,5 +1,42 @@
 {% extends 'posts/base.html' %}
-
+{% load static %}
+{% block head %}
+<div class="container col-12" a>
+    <img src="https://d2rlq84xifqisi.cloudfront.net/images/watchaOgImage.ea966f9cbeb2daa758dd.png" alt="안되!">
+</div>
+{% endblock %}
 {% block body %}
-<h1>index</h1>
+<link rel="stylesheet" href="{% static 'posts/search.css' %}">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<div class="container">
+    <br/>
+    <div class="layer">
+	<div class="row justify-content-center">
+                        <div class="col-12 col-lg-12 col-lg-12">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="식당, 지역, 음식을 검색하세요!! ">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-danger" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+    </div>
+</div>
 {% endblock %}
