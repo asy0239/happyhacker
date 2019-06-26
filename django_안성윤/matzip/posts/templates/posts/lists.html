@@ -1,0 +1,122 @@
+{% extends 'posts/base.html'%}
+{% load static %}
+{% block body %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'posts/css/lists.css'%}">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+</style>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <h2 class="main-heading wow lightSpeedIn" data-wow-duration="1s">검색어</h2>
+                </div>
+            </div>
+                <section class="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                        <div class="img-box wow bounceInUp center" data-wow-duration="2s" data-wow-delay="0s">
+                            <a href="{% url 'posts:detail'%}"><img src="{% static 'posts/img/lion.gif'%}"></a>
+                        </div>
+                    </div>
+
+                            <div class="col-md-6">
+                                <div class="text-block wow bounceInDown center" data-wow-duration="4s">
+                                    <h2>The usefulness of nonsensical content</h2>
+                                    <p>Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+                <section class="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img-box wow bounceInUp center" data-wow-duration="2s" data-wow-delay="0s">
+                                    <img src="data:image/jpeg;base64,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">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="text-block wow bounceInDown center" data-wow-duration="4s">
+                                    <h2>The usefulness of nonsensical content</h2>
+                                    <p>Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img-box wow bounceInUp center" data-wow-duration="2s" data-wow-delay="0s">
+                                    <img src="http://sifatit.com/wp-content/uploads/2012/07/dummy.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-block wow bounceInDown center" data-wow-duration="4s">
+                                    <h2>The usefulness of nonsensical content</h2>
+                                    <p>Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="img-box wow bounceInUp center" data-wow-duration="2s" data-wow-delay="0s">
+                                    <img src="http://sifatit.com/wp-content/uploads/2012/07/dummy.jpg">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="text-block wow bounceInDown center" data-wow-duration="4s">
+                                    <h2>The usefulness of nonsensical content</h2>
+                                    <p>Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+        <div class="col-md-4">
+            <section class="main fixed" >
+                    <div id="map" class="p-5 mb-5 bg-light" style="width:400px;height:300px;">
+                    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d44677d1bed65cd83d14bc727df978a"></script>
+                    <script>
+                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                            mapOption = {
+                                center: new daum.maps.LatLng(37.56499, 126.97594), // 지도의 중심좌표
+                                level: 3, // 지도의 확대 레벨
+                                mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
+                            };
+
+                        // 지도를 생성한다
+                        var map = new daum.maps.Map(mapContainer, mapOption);
+                    </script>
+                    </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'posts/js/lists.js'%}"></script>
+
+
+{% endblock %}
