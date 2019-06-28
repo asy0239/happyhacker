@@ -2,7 +2,7 @@
 ### Python template
 # Byte-compiled / optimized / DLL files
 .idea/
-__pyca  che__/
+__pycache__/
 *.py[cod]
 *$py.class
 
@@ -126,5 +126,5 @@ dmypy.json
 .pyre/
 
 .idea/
+__pycache__/
 data/
-django/
